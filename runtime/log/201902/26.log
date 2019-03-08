@@ -1,0 +1,94 @@
+---------------------------------------------------------------
+[ 2019-02-26T17:40:36+08:00 ] 127.0.0.1 POST www.fastadmin.com/index.php/admin/index/login
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001191s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_admin` [ RunTime:0.011925s ]
+[ sql ] [ SQL ] SELECT * FROM `fahoo_admin` WHERE  `username` = 'admin' LIMIT 1 [ RunTime:0.000555s ]
+[ sql ] [ SQL ] UPDATE `fahoo_admin`  SET `logintime`=1551174036,`token`='fac2ee63-c598-4b28-a018-c22cba5a60e9',`updatetime`=1551174036  WHERE  `id` = 1 [ RunTime:0.016378s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_admin_log` [ RunTime:0.006130s ]
+[ sql ] [ SQL ] INSERT INTO `fahoo_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('登录' , '{\"__token__\":\"5e8dc8cee3dada51901e3aeabda80559\",\"username\":\"admin\",\"captcha\":\"x6r7\"}' , '/index.php/admin/index/login' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36' , '127.0.0.1' , 1551174036) [ RunTime:0.002027s ]
+---------------------------------------------------------------
+[ 2019-02-26T17:40:36+08:00 ] 127.0.0.1 GET www.fastadmin.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001397s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_group_access` [ RunTime:0.024269s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fahoo_auth_group_access` `aga` LEFT JOIN `fahoo_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_rule` [ RunTime:0.005916s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fahoo_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SELECT * FROM `fahoo_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.000466s ]
+---------------------------------------------------------------
+[ 2019-02-26T17:40:36+08:00 ] 127.0.0.1 GET www.fastadmin.com/index.php/admin/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011075s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_group_access` [ RunTime:0.007762s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fahoo_auth_group_access` `aga` LEFT JOIN `fahoo_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_rule` [ RunTime:0.006426s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fahoo_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000514s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fahoo_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000504s ]
+---------------------------------------------------------------
+[ 2019-02-26T17:40:45+08:00 ] 127.0.0.1 GET www.fastadmin.com/index.php/admin/auth/rule?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011065s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_group_access` [ RunTime:0.011971s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fahoo_auth_group_access` `aga` LEFT JOIN `fahoo_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_rule` [ RunTime:0.005878s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fahoo_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000458s ]
+[ sql ] [ SQL ] SELECT * FROM `fahoo_auth_rule` ORDER BY `weigh` DESC [ RunTime:0.000818s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fahoo_auth_rule` WHERE  `name` = 'auth/rule' LIMIT 1 [ RunTime:0.000507s ]
+---------------------------------------------------------------
+[ 2019-02-26T17:40:45+08:00 ] 127.0.0.1 GET www.fastadmin.com/index.php/admin/auth/rule/index?sort=weigh&order=desc&_=1551174045636
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010104s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_group_access` [ RunTime:0.012234s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fahoo_auth_group_access` `aga` LEFT JOIN `fahoo_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000370s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_rule` [ RunTime:0.025823s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fahoo_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000523s ]
+[ sql ] [ SQL ] SELECT * FROM `fahoo_auth_rule` ORDER BY `weigh` DESC [ RunTime:0.000894s ]
+---------------------------------------------------------------
+[ 2019-02-26T17:40:50+08:00 ] 127.0.0.1 POST www.fastadmin.com/index.php/admin/auth/rule/multi/ids/4
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010359s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_group_access` [ RunTime:0.012409s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fahoo_auth_group_access` `aga` LEFT JOIN `fahoo_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000413s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_rule` [ RunTime:0.005820s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fahoo_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000428s ]
+[ sql ] [ SQL ] SELECT * FROM `fahoo_auth_rule` ORDER BY `weigh` DESC [ RunTime:0.000812s ]
+[ sql ] [ SQL ] SELECT * FROM `fahoo_auth_rule` WHERE  `id` IN (4) [ RunTime:0.000508s ]
+[ sql ] [ SQL ] UPDATE `fahoo_auth_rule`  SET `ismenu`=0,`updatetime`=1551174050  WHERE  `id` = 4 [ RunTime:0.015977s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_admin_log` [ RunTime:0.006057s ]
+[ sql ] [ SQL ] INSERT INTO `fahoo_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"\",\"ids\":\"4\",\"params\":\"ismenu=0\"}' , '/index.php/admin/auth/rule/multi/ids/4' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36' , '127.0.0.1' , 1551174050) [ RunTime:0.002289s ]
+---------------------------------------------------------------
+[ 2019-02-26T17:40:50+08:00 ] 127.0.0.1 POST www.fastadmin.com/index.php/admin/index/index
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010435s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_group_access` [ RunTime:0.012256s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fahoo_auth_group_access` `aga` LEFT JOIN `fahoo_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000392s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_rule` [ RunTime:0.005936s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fahoo_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000590s ]
+[ sql ] [ SQL ] SELECT * FROM `fahoo_auth_rule` WHERE  `status` = 'normal'  AND `ismenu` = 1 ORDER BY `weigh` DESC [ RunTime:0.000646s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_admin_log` [ RunTime:0.006151s ]
+[ sql ] [ SQL ] INSERT INTO `fahoo_admin_log` (`title` , `content` , `url` , `admin_id` , `username` , `useragent` , `ip` , `createtime`) VALUES ('' , '{\"action\":\"refreshmenu\"}' , '/index.php/admin/index/index' , 1 , 'admin' , 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/72.0.3626.119 Safari/537.36' , '127.0.0.1' , 1551174050) [ RunTime:0.001943s ]
+---------------------------------------------------------------
+[ 2019-02-26T17:40:50+08:00 ] 127.0.0.1 GET www.fastadmin.com/index.php/admin/auth/rule/index?sort=weigh&order=desc&_=1551174045637
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001193s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_group_access` [ RunTime:0.005940s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fahoo_auth_group_access` `aga` LEFT JOIN `fahoo_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000599s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_rule` [ RunTime:0.007477s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fahoo_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000528s ]
+[ sql ] [ SQL ] SELECT * FROM `fahoo_auth_rule` ORDER BY `weigh` DESC [ RunTime:0.000869s ]
+---------------------------------------------------------------
+[ 2019-02-26T17:40:51+08:00 ] 127.0.0.1 GET www.fastadmin.com/index.php/admin/auth/rule/index?sort=weigh&order=desc&_=1551174045638
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001136s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_group_access` [ RunTime:0.012699s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fahoo_auth_group_access` `aga` LEFT JOIN `fahoo_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000364s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_rule` [ RunTime:0.006342s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fahoo_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000554s ]
+[ sql ] [ SQL ] SELECT * FROM `fahoo_auth_rule` ORDER BY `weigh` DESC [ RunTime:0.000747s ]
+---------------------------------------------------------------
+[ 2019-02-26T17:44:08+08:00 ] 127.0.0.1 GET www.fastadmin.com/admin.php
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001403s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_group_access` [ RunTime:0.016426s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fahoo_auth_group_access` `aga` LEFT JOIN `fahoo_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000497s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_rule` [ RunTime:0.005844s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fahoo_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000441s ]
+---------------------------------------------------------------
+[ 2019-02-26T17:44:08+08:00 ] 127.0.0.1 GET www.fastadmin.com/admin.php/dashboard?addtabs=1
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011356s ] mysql:host=127.0.0.1;dbname=fastadmin;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_group_access` [ RunTime:0.007087s ]
+[ sql ] [ SQL ] SELECT `aga`.`uid`,`aga`.`group_id`,`ag`.`id`,`ag`.`pid`,`ag`.`name`,`ag`.`rules` FROM `fahoo_auth_group_access` `aga` LEFT JOIN `fahoo_auth_group` `ag` ON `aga`.`group_id`=`ag`.`id` WHERE  (  aga.uid='1' and ag.status='normal' ) [ RunTime:0.000406s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `fahoo_auth_rule` [ RunTime:0.005889s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`condition`,`icon`,`name`,`title`,`ismenu` FROM `fahoo_auth_rule` WHERE  `status` = 'normal' [ RunTime:0.000455s ]
+[ sql ] [ SQL ] SELECT `title`,`remark` FROM `fahoo_auth_rule` WHERE  `name` = 'dashboard' LIMIT 1 [ RunTime:0.000480s ]
